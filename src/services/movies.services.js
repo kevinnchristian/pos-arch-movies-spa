@@ -11,7 +11,7 @@ const getPopularMovies = async () => {
 		return response;
 
 	} catch (error) {
-		console.error("Erro ao buscar filmes populares:", error);
+		console.error("[Erro - Services] Erro ao buscar filmes populares:", error);
 		throw error;
 	}
 };
@@ -22,7 +22,7 @@ const getDetailsMovie = async (movieId) => {
 		return response;
 
 	} catch (error) {
-		console.error("Erro ao buscar detalhes do filme:", error);
+		console.error("[Erro - Services] Erro ao buscar detalhes do filme:", error);
 		throw error;
 	}
 };

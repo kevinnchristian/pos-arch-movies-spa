@@ -1,17 +1,7 @@
-import { useEffect, useState } from "react";
-import { getPopularMovies } from "../services/movies.services";
+import { useMovies } from "../hooks/useMovies.js";
 
 export function Movies() {
-	const [movies, setMovies] = useState([]);
-
-	useEffect(() => {
-		try {
-			getPopularMovies().then(({ data }) => setMovies(data.results));
-
-		} catch (error) {
-			console.error("[Erro - useEffect] Ao buscar filmes populares:", error);
-		}
-	}, []);
+	const movies = useMovies();
 
 	return (
 		<section>
