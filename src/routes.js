@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Home } from "./views/Home.js";
 import { Movies } from "./views/Movies.js";
+import { MovieDetail } from "./views/movieDetail/MovieDetail.js";
 import { RootLayout } from "./views/RootLayout.js";
 
 const routes = createBrowserRouter([
@@ -15,6 +16,10 @@ const routes = createBrowserRouter([
 			{
 				path: "/movies",
 				element: <Movies />
+			},
+			{
+				path: "/movies/:id",
+				element: <MovieDetail />
 			}
 		]
 	}

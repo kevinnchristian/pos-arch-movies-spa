@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import styles from './MovieItem.module.css'
+import style from './MovieItem.module.css'
 
 export function MovieItem({ movie }) {
 	return (
-		<div className={styles.movie}>
+		<div className={style.movie}>
 			{
 				movie.poster_path &&
 				<img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} />
@@ -11,8 +11,8 @@ export function MovieItem({ movie }) {
 			<h3>{movie.title}</h3>
 			<p>
 				<Link
-					className={styles.detailsBtn}
-					to={`movies/${movie.id}`}>
+					className={style.detailsBtn}
+					to={`/movies/${movie.id}`}>
 					Ver Detalhes
 				</Link>
 			</p>
